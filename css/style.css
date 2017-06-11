@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:700');
+body{
+	padding: 0;
+	margin: 0;
+}
+#header-canvas{
+	background-image: url('../images/home.jpg');
+	background-position: center;
+	background-size: cover;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	height:100vh;
+}
+
+
+.main-title {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	color: white;
+	text-align: center;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	font-family: 'Roboto', sans-serif;
+  opacity: 0;
+	font-weight: 700;
+  transition: 1200ms opacity ease-in 400ms;
+	text-transform: uppercase;
+	font-size: 4.2em;
+	letter-spacing: 0.1em;
+}
+#sub{
+	font-size: 20px;
+	display: inline-block;
+
+}
+.intro{
+    transition: 1200ms opacity ease-in 400ms;
+    position: absolute;
+		margin: 0;
+		top: 50%;
+		left: 50%;
+		width: 200px;
+		text-align: center;
+		transform: translate(-50%,-50%);
+    z-index: 1;
+}
+.intro p{
+    color: black;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    padding-top: 40px;
+    display: block;
+    z-index: 1;
+    text-align: center;
+    letter-spacing: 0.1em;
+}
+#Layer_1{
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 0;
+    animation: dash 4s linear forwards;
+}
+@-webkit-keyframes dash{
+    from {
+        stroke-dashoffset:2000;
+    }
+    to {
+        stroke-dashoffset:0;
+    }
+}
+#scroll{
+    position: absolute;
+    bottom: 5%;
+    z-index: 1;
+    color: white;
+		left: 50%;
+		transform: translateX(-50%);
+    text-align: center;
+    opacity: 0;
+    transition: 1200ms opacity ease-in 400ms;
+}
+#scrollimage{
+		margin-top: 15px;
+    width: 5%;
+    height: 5%;
+    animation: bounce 0.5s infinite alternate;
+    -webkit-animation: bounce 0.5s infinite alternate;
+}
+@keyframes bounce {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-15px);
+  }
+}
+@-webkit-keyframes bounce {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-15px);
+  }
+}
+
+.menu{
+    position: relative;
+    color: black;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 50px;
+    text-transform: uppercase;
+}
+.nav-bar{
+  position: relative;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  padding: 100px;
+  transform: translateX(-50%)
+}
+.news{
+  color: white;
+}
+.news, .about, .activites, .projects, .alumni, .contact{
+  height: 500px;
+  background-color: black;
+}
+.about, .activites, .projects, .alumni, .contact{
+  box-shadow: 1px 1px 3px #888888;
+  background-color: white;
+}
+#menu-cards{
+	color: black;
+}
+#verticaltext{
+    width:5%;
+    word-wrap: break-word;
+    white-space:pre-wrap;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		font-family: 'Roboto', sans-serif;
+		font-size: 25px;
+		z-index: 5;
+}
+#overlay{
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	height: 0;
+	width: 125%;
+	opacity: 0.5;
+	transition: height 1s;
+}
+#menu-cards:hover{
+	color: white;
+	background-color: #35393C;
+}
+#menu-cards:hover #overlay{
+	height: 100%;
+}
+.about-overlay{
+	background-image: url('https://images.alphacoders.com/656/thumb-1920-6563.jpg');
+}
+.projects-overlay{
+	background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Building_services_coordinated_drawing.JPG/1200px-Building_services_coordinated_drawing.JPG');
+}
+.activites-overlay{
+	background-image: url('https://www.deltadentalmi.com/MediaLibraries/Global/images/DDFSeminar10.jpg');
+}
+.alumni-overlay{
+	background-image: url('https://undergrad.wharton.upenn.edu/wp-content/uploads/2014/06/alumni-leaders.jpg');
+}
+.contact-overlay{
+	background-image: url('../images/contact.jpg');
+}
